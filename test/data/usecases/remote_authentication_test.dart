@@ -39,7 +39,7 @@ void main() {
     ));
   });
 
-  test('Should throw UnexpectedErro if HttpClient return 400', () async {
+  test('Should throw UnexpectedError if HttpClient return 400', () async {
     when(httpClient.request(
       url: anyNamed('url'),
       method: anyNamed('method'),
@@ -51,7 +51,7 @@ void main() {
     expect(future, throwsA(DomainError.unexpected));
   });
 
-  test('Should throw UnexpectedErro if HttpClient return 404', () async {
+  test('Should throw UnexpectedError if HttpClient return 404', () async {
     when(httpClient.request(
       url: anyNamed('url'),
       method: anyNamed('method'),
@@ -63,7 +63,7 @@ void main() {
     expect(future, throwsA(DomainError.unexpected));
   });
 
-  test('Should throw UnexpectedErro if HttpClient return 500', () async {
+  test('Should throw UnexpectedError if HttpClient return 500', () async {
     when(httpClient.request(
       url: anyNamed('url'),
       method: anyNamed('method'),
